@@ -1,24 +1,31 @@
-package com.example.model;
+package org.example.model;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlType;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Weather")
 public class Weather {
     private String city;
-    private double temperature;
-    private String condition;
+    private String description;
+    private double temperatureCelsius;
 
-    public Weather() {}
+    public Weather() { }
 
-    public Weather(String city, double temperature, String condition) {
+    public Weather(String city, String description, double temperatureCelsius) {
         this.city = city;
-        this.temperature = temperature;
-        this.condition = condition;
+        this.description = description;
+        this.temperatureCelsius = temperatureCelsius;
     }
 
+    // Getters and Setters
     public String getCity() { return city; }
     public void setCity(String city) { this.city = city; }
 
-    public double getTemperature() { return temperature; }
-    public void setTemperature(double temperature) { this.temperature = temperature; }
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
 
-    public String getCondition() { return condition; }
-    public void setCondition(String condition) { this.condition = condition; }
+    public double getTemperatureCelsius() { return temperatureCelsius; }
+    public void setTemperatureCelsius(double temperatureCelsius) { this.temperatureCelsius = temperatureCelsius; }
 }

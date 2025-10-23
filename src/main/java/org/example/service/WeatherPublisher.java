@@ -1,4 +1,4 @@
-package com.example.soap;
+package org.example.service;
 
 import jakarta.xml.ws.Endpoint;
 

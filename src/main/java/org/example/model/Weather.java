@@ -10,7 +10,7 @@ public class Weather {
     private String city;
     private String description;
     private double temperatureCelsius;
-
+    
     public Weather() { }
 
     public Weather(String city, String description, double temperatureCelsius) {

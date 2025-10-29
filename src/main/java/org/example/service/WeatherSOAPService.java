@@ -22,8 +22,10 @@ public class WeatherSOAPService {
     public Weather getWeather(String city) {
         System.out.println("getWeather called with city: '" + city + "'");
 
-        // Handle null case gracefully
-       
+        // Handle null case 
+        if (city == null) {
+            return new Weather("Unknown", "City parameter is required", 0);
+        }
 
         Weather result = weatherData.get(city);
         if (result == null) {
